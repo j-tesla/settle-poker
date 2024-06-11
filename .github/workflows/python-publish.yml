@@ -34,6 +34,7 @@ jobs:
     - name: Build package
       run: poetry build
     - name: Publish package
-      uses: JRubics/poetry-publish@v2.0
+      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
       with:
-        pypi_token: ${{ secrets.PYPI_API_TOKEN }}
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}
